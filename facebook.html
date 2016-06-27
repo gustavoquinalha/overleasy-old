@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Overleasy - Facebook</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='css/font-awesome.css' rel='stylesheet' type='text/css'>
+  <link href='css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+  <link href='css/ghq.css' rel='stylesheet' type='text/css'>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+      <script type="text/javascript" src="https://angular-file-upload.appspot.com/js/ng-file-upload-shim.js"></script>
+      <script type="text/javascript" src="https://angular-file-upload.appspot.com/js/ng-file-upload.js"></script>
+
+      <script type="text/javascript" src="js/dropzone.js"></script>
+
+
+      <!--<script type="text/javascript" src="js/angular.js"></script>
+      <script type="text/javascript" src="js/dropzone.js"></script>
+      <script type="text/javascript" src="js/ng-file-upload-shim.js"></script>
+      <script type="text/javascript" src="js/ng-file-upload.js"></script>-->
+
+  <style type="text/css">
+
+.mai {
+    display: none;
+}
+
+  </style>
+</head>
+
+
+  <body ng-app="fileUpload" ng-controller="MyCtrl" style="">
+  <div style="background:#3B5998; width:100%; height:70px; color:#fff; text-align:center;">
+    <div style="text-align:center; padding-top:20px">
+      <img src="img/logo2.svg" style="width:150px">
+    </div>
+  </div>
+
+  <div style="padding-top:20px;text-align:center"><img src="img/facebook.svg" style="width:150px"></div>
+  <div style="margin:0 auto; width:100%;text-align:center">
+     <!--<div style="display:inline-block">
+       Foto de capa <form action="/file-upload"
+      class="dropzone"
+      id="my-awesome-dropzone" ngf-select ng-model="fotoCapa" name="file" accept="image/*" ngf-max-size="2MB"></form>
+ </div>   -->
+ <!--<div style="display:inline-block; padding-left:20px">
+      Foto de perfil:
+      <form action="/file-upload"
+      class="dropzone"
+      id="my-awesome-dropzone" ngf-select ng-model="fotoPerfil" name="file" accept="image/*" ngf-max-size="2MB"></form>
+      <i ng-show="myForm.file.$error.maxSize">File too large 
+          {{errorFile.size / 1000000|number:1}}MB: max 2M</i>    
+</div>-->
+
+  <form name="myForm">
+     <!-- 
+      Nome da page: <input type="" ng-model="teste" name="" placeholder="Nome da página"><br>
+      Catergoria da page: <input type="" ng-model="cate" name="" placeholder="Categoria da página">
+      -->
+    <br>
+    
+     <div class="topo" style="position:relative;">
+
+       <div class="capa" style="z-index:1">
+        <div class="fotoCapa" ngf-background="fotoCapa" style="z-index:">
+
+            <!--<img ng-show="myForm.file.$valid" ngf-thumbnail="fotoCapa" class="thumb" style="z-index:2">-->
+              <div id="over" class="overlay" style="">
+              
+          </div>
+
+        </div>
+        <div style="position:absolute;width:50px; height:50px;top:0; z-index:999999; padding-top:10px; padding-left:10px">
+           <div class="upload">
+              <input type="file" name="uplod" ngf-select ng-model="fotoCapa" />
+          </div>
+         
+        </div>
+        <div style="width:100px; height:100px; padding-left:10px; padding-top:10px">
+         
+        </div>
+      <div class="texto" style="text-align:left">{{nomePage}} <br> <span class="categoria">{{categ}}</span></div>
+        <div class="perfil" style="z-index:10">
+          <div ngf-background="fotoPerfil" class="perfi" style="width:100%; height:180px" ></div>
+             <div style="position:absolute;width:50px; height:50px;top:0; z-index:999999; padding-top:5px; padding-left:5px">
+               <div class="upload">
+                <input type="file" name="uplod" ngf-select ng-model="fotoPerfil"/>
+               </div>
+             </div>
+        </div>
+      </div>
+      <div style="background:#fff; width:850px; height:70px; margin:0 auto;border:1px solid rgba(0, 0, 0, .25);">
+        <div>
+          <ul style="">
+            <li class="me" style="display:inline-block; clear:left"><button id="ov" class="grid">Guides</button></li>
+            <li class="me" style="display:inline-block; clear:left"><a href="">Página inicial</a></li>
+            <li class="me" style="display:inline-block; clear:left"><a href="">Sobre</a></li>
+            <li class="me" style="display:inline-block; clear:left"><a href="">Curtidas</a></li>
+            
+          </ul>
+        </div>
+      </div>
+     </div>
+
+     
+     <br>
+  </form>
+
+
+  <div class="container">
+    <div class="role esquerdo">
+       <div style="width:100%; text-align:center">
+        <div style="">
+          
+        </div>
+       
+          <!--
+
+            apagarrr
+          <i ng-click="fotoCapa = null" ng-show="fotoCapa" class="fa fa-times-circle fa-2x" aria-hidden="true" style="color:#E2634C"></i>-->
+      
+         <!-- <i ng-click="fotoPerfil = null" ng-show="fotoPerfil" class="fa fa-times-circle fa-2x" aria-hidden="true" style="color:#E2634C"></i>-->
+      <!--<img ng-show="myForm.file.$valid" ngf-thumbnail="fotoCapa" class="thumb"> <button ng-click="fotoCapa = null" ng-show="fotoCapa">Remove</button>-->
+<div style="width:100%;display:flex; flex-direction:row;flex-wrap:wrap;justify-content:space-around">
+  <div style="width:103px; margin-bottom: 5px;height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-9/13417577_740888032680771_6657578410879032680_n.jpg?oh=456bdf94647e1954f25dd612330d467f&oe=5807FA60);background-size:100%;order:1;">
+    <div ngf-background="fotoCapa" style="width:104px; height:104px; background-size:100%"></div>
+  </div>
+  <div style="width:103px;;height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-0/p110x80/13435473_744243775678530_3711155141077830228_n.jpg?oh=aafd6074c0ce32d81af2ca8478c29fb3&oe=57F501C9);background-size:100%;order:1;"> 
+  <div ngf-background="fotoPerfil" style="width:104px; height:104px;background-size:100%"></div>
+  </div>
+  <div style="width:103px; height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-0/p110x80/13174038_1092206840841265_4905760111593758236_n.jpg?oh=21958fd6e7aef208164f44d0043dd876&oe=57FBBC8D);;background-size:100%;order:1;">
+    <div ngf-background="fotoPost" style="width:104px; height:104px;background-size:100%"></div>
+  </div>
+  <div style="width:103px;  margin-bottom: 5px; height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-9/13417577_740888032680771_6657578410879032680_n.jpg?oh=456bdf94647e1954f25dd612330d467f&oe=5807FA60);;background-size:100%;order:1;"></div>
+  <div style="width:103px; height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-9/13417577_740888032680771_6657578410879032680_n.jpg?oh=456bdf94647e1954f25dd612330d467f&oe=5807FA60);;background-size:100%;order:1;"></div>
+  <div style="width:103px; height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-9/13417577_740888032680771_6657578410879032680_n.jpg?oh=456bdf94647e1954f25dd612330d467f&oe=5807FA60);;background-size:100%;order:1;"></div>
+  <div style="width:103px; height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-9/13417577_740888032680771_6657578410879032680_n.jpg?oh=456bdf94647e1954f25dd612330d467f&oe=5807FA60);;background-size:100%;order:1;"></div>
+  <div style="width:103px; height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-9/13417577_740888032680771_6657578410879032680_n.jpg?oh=456bdf94647e1954f25dd612330d467f&oe=5807FA60);;background-size:100%;order:1;"></div>
+  <div style="width:103px; height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-9/13417577_740888032680771_6657578410879032680_n.jpg?oh=456bdf94647e1954f25dd612330d467f&oe=5807FA60);;background-size:100%;order:1;"></div>
+  
+  
+
+</div>
+
+    </div></div>
+
+
+    <div class="role direito">
+      <div style="padding-top:12px; padding-bottom:12px">
+        <div class="post">
+        <div style="width:100%; height:470px; margin:0 auto; background-size:100%; background-position:center center; background-repeat:no-repeat; z-index:9" ngf-background="fotoPost">
+          
+        </div>
+        <div class="overlaypost">
+          <div style="position:absolute;width:50px; height:50px;top:0; z-index:999999; padding-top:5px; padding-left:5px">
+               <div class="upload">
+                <input type="file" name="uplod" ngf-select ng-model="fotoPost"/>
+               </div>
+             </div>
+
+        </div>
+
+       </div>
+
+      </div>
+    </div>
+  </div>
+
+<div class="teste" style="display:none">
+  <div style="background:url(img/devices.svg) 100%; width:900px; max-width:100%; height:500px; background-size:100%;margin:0 auto; position:relative">
+<div style="background:#fff; position:absolute;top:100px;left:310px; width:420px; height:120px; background-size:cover; background-position:center center" ngf-background="fotoCapa">
+ 
+</div>
+
+</div>
+</div>
+
+
+
+  <div style="padding-top:50px"></div>
+  <div class="">
+    <div class="rodape">
+      <i class="fa fa-code" aria-hidden="true" style=""></i> with <i class="fa fa-coffee" aria-hidden="true" style=""></i> by <a href="http://github.com/gustavoquinalha">Gustavo</a><br> 
+      <div class="follow" style="padding-top:10px">
+        <a href="https://www.facebook.com/gquinalha" target="blank"><i class="fa fa-facebook-official fa-2x" aria-hidden="true" style=" padding-right: 10px"></i></a>
+        <a href="https://github.com/gustavoquinalha" target="blank"><i class="fa fa-github fa-2x" aria-hidden="true" style=" padding-right: 10px"></i></a>
+        <a href="http://twitter.com/gustavoquinalha" target="blank"><i class="fa fa-twitter fa-2x" aria-hidden="true" style=""></i></a>
+      </div>
+    </div>
+  </div>
+<script>
+  $(document).ready(function(){
+      $("#ov").click(function(){
+          $("#over").toggleClass("mai");
+      });
+  });
+</script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+  
+
+</html>
+

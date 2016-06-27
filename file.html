@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <title>Facebook Tools</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='css/font-awesome.css' rel='stylesheet' type='text/css'>
+  <link href='css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+      <script type="text/javascript" src="https://angular-file-upload.appspot.com/js/ng-file-upload-shim.js"></script>
+      <script type="text/javascript" src="https://angular-file-upload.appspot.com/js/ng-file-upload.js"></script>
+  <style type="text/css">
+  * {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  html, body {
+    height:100%;
+  } 
+
+    .thumb {
+    width: 851px;
+    height: 315px;
+    float: none;
+    position: relative;
+}
+
+form .progress {
+    line-height: 15px;
+}
+}
+
+.progress {
+    display: inline-block;
+    width: 100px;
+    border: 3px groove #CCC;
+}
+
+.progress div {
+    font-size: smaller;
+    background: orange;
+    width: 0;
+}
+  </style>
+  
+</head>
+
+
+  <body ng-app="fileUpload" ng-controller="MyCtrl">
+  <div style="background:#3B5998; width:100%; height:60px; color:#fff; text-align:center;">
+    <div style="text-align:center; padding-top:20px">
+      <span style="font-weight:900!important"><i class="fa fa-code" aria-hidden="true" style="padding-right:5px; font-weight:900"> </i>Facebook</span><span style="font-weight:100!important"> tools</span>
+    </div>
+  </div>
+  <form name="myForm">
+     <!-- 
+      Nome da page: <input type="" ng-model="teste" name="" placeholder="Nome da página"><br>
+      Catergoria da page: <input type="" ng-model="cate" name="" placeholder="Categoria da página">
+      -->
+
+     
+     <div style="width:100%; text-align:center">
+        <br>Foto de capa:
+      <input type="file" ngf-select ng-model="fotoCapa" name="file" accept="image/*" ngf-max-size="2MB" required>
+      <i ng-show="myForm.file.$error.maxSize">File too large 
+          {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+
+
+
+      </wbr>/ Foto de perfil:
+      <input type="file" ngf-select ng-model="fotoPerfil" name="file" accept="image/*" ngf-max-size="2MB" required>
+      <i ng-show="myForm.file.$error.maxSize">File too large 
+          {{errorFile.size / 1000000|number:1}}MB: max 2M</i>    
+      <!--<img ng-show="myForm.file.$valid" ngf-thumbnail="fotoCapa" class="thumb"> <button ng-click="fotoCapa = null" ng-show="fotoCapa">Remove</button>-->
+     </div>
+
+     
+     
+      
+   
+    <br>
+     <div style="width:100%; overflow:hidden; min-height:100%;background:red; height:400px; ">
+       <div style="position:relative;width:851px; height:315px; margin:0 auto">
+       <div style="background:#3B5998; background-image: url(capa.jpg) 100%; background-position: center center;background-size:cover;width:851px; height:315px; border:1px solid rgba(0, 0, 0, .25); margin:0 auto">
+        <img ng-show="myForm.file.$valid" ngf-thumbnail="fotoCapa" class="thumb">  
+     </div>
+     <div style="font-size:24px; color:#fff; position:absolute; top:250px; left:220px">{{nome}} <br> <span style="font-size:18px; font-weight:200">{{categ}}</span></div>
+     <div style="width:180px; height:180px; border:4px solid #fff; border-radius:2px;background:#3B5998; background-image: url(perfil.jpg) ; position:absolute; top:176px; left:16px; box-shadow:0px 0px 2px black">
+        <img ng-show="myForm.file.$valid" ngf-thumbnail="fotoPerfil" style="width:180px; height:180px;">  
+     </div>
+     </div>
+     </div>
+  </form>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+  
+
+</html>
+

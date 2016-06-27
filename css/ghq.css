@@ -1,0 +1,213 @@
+  * {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  html, body {height:100%;}
+
+    .thumb {
+    width: 851px;
+    height: 315px;
+    float: none;
+    position: relative;
+}
+
+form .progress {
+    line-height: 15px;
+}
+
+body { background:#E9EBEE; }
+
+.progress {
+    display: inline-block;
+    width: 100px;
+    border: 3px groove #CCC;
+}
+
+.progress div {
+    font-size: smaller;
+    background: orange;
+    width: 0;
+}
+.footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+.rodape {
+  width: 100%;
+  background:#4B4F56;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: 100!important;
+  font-size: 12px
+}
+.rodape a {
+  color: #ccc;
+  text-decoration: none }
+
+  .rodape a:hover {
+  color: #fff;
+  text-decoration: none }
+
+
+
+.topo {width:100%; overflow:hidden; min-height:100%; height:400px;}
+.capa {position:relative;width:851px; max-width: 100%; height:315px; margin:0 auto;background-image: url(../img/capa.jpg);}
+.fotoCapa {background-position: center center; background-size: cover; background-repeat: no-repeat; background width:851px; height:315px; border:1px solid rgba(0, 0, 0, .25); margin:0 auto;z-index: 9;position:relative}
+.texto {font-size:24px; color:#fff; position:absolute; top:250px; left:220px}
+.categoria {font-size:18px; font-weight:200;}
+.perfil {width:180px; height:180px; border:4px solid #fff; border-radius:2px;background-color:#3B5998; background-image: url(../img/perfil.jpg) ;z-index: 99; position:absolute; top:176px; left:16px; box-shadow:0px 0px 2px black}
+.fotoPerfil {width:180px; height:180px;}
+.padd { padding-bottom: 12px; padding-top: 12px}
+.post {border:1px solid rgba(0, 0, 0, .1);height:470px; width: 470px; margin:0 auto;  background:url(../img/post.jpg); background-size:100%; position: relative }
+.page {width:100%; overflow:hidden;}
+
+
+
+  .container {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width: 851px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction:column;
+    }
+    .teste { display: none }      
+  }
+
+@media only screen and (max-width: 768px){
+  .role {
+    width: 100%!important;
+  }
+}
+  .role {
+    width: 100%
+    
+  }
+  .esquerdo {
+    order: 1;
+    background:#fff;
+    margin: 0 auto;
+    justify-content: center;
+    width: 324px;
+    border:1px solid;
+    border-color:#e5e6e9 #dfe0e4 #d0d1d5;
+    padding: 12px;
+
+  }
+  .direito {
+    order: 2;
+    background:#fff;
+    margin: 0 auto;
+    justify-content: center;
+    width: 496px;
+    border:1px solid;
+    border-color:#e5e6e9 #dfe0e4 #d0d1d5;
+  }
+
+
+@media only screen and (max-width: 768px) {
+  .direito {
+        width: 100% !important;
+        margin: 0 auto;
+      }
+
+      .esquerdo {
+        width: 100% !important;
+        margin: 0 auto;
+      }
+
+      .post {
+        width: 100% !important;
+
+
+        background-repeat: no-repeat;
+      }
+      .container {
+        width: 100% !important;
+        margin: 0 auto;
+
+      }
+}
+
+
+.overlay {
+  position: absolute;
+  top:0;
+  background:url(../img/overlay.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  z-index: 9;
+  height: 315px;
+}
+
+
+.overlaypost {
+  position: absolute;
+  top:0;
+  background:url(../img/overlay-post.svg);
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 470px;
+  z-index: 9;
+  height: 470px;
+  max-width: 100%;
+  max-height: 470px
+}
+
+
+.fotoPost {width:470px; height:auto; }
+
+.perfi {
+  background-size: cover; background-position: center center;
+}
+
+.me {
+  padding-top:20px;
+}
+
+.me a {
+  text-transform: none;
+  text-decoration: none;
+  padding-left:15px;
+  color:#4B4F56;
+}
+
+.upload {
+    width: 30px;
+    height: 30px;
+    background: url(../img/photo-camera.svg);
+    overflow: hidden;
+    opacity: 0.2;
+    z-index: 99999;
+}
+
+.upload input {
+    display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
+
+.upload:hover {
+  opacity: 1;
+}
+
+ .grid {
+    background:transparent; color:#3B5998; padding-top:10px; padding-bottom:10px; width:100px; border:1px solid #3B5998; border-radius:4px; font-size:14px
+  }
+
+  .grid:hover {
+    background:#3B5998; color:#fff;
+  }
+
+

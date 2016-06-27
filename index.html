@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>gustavoquinalha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='css/font-awesome.css' rel='stylesheet' type='text/css'>
+  <link href='css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="ghq.css" charset="utf-8">
+    
+
+
+  </head>
+<div style="background:#3B5998; width:100%; height:70px; color:#fff; text-align:center;">
+    <div style="text-align:center; padding-top:20px">
+      
+      <img src="img/logo2.svg" style="width:150px">
+    </div>
+  </div>
+  <body>
+      </div>
+
+    </div>
+     <div ng-app="myApp" ng-controller="CharactersCtrl">
+      
+
+      <div style="margin:0 auto; width:100%;text-align:center; padding-top:50px">
+        <input type="text" ng-model="searchChar" placeholder="Search" style="width:80%; margin:0 auto; font-size:22px; padding-top:10px;padding-bottom:10px">
+      </div>
+      
+
+
+
+
+      <div class="fundo" style="width:80%; margin:0 auto;">
+      <div class="card-all-3 um" ng-repeat="char in characters | filter:searchChar">
+        <a href="{{char.link}}">
+          <div class="card centra text-center">
+          <div class="logo-logo">
+            <div class="logo">
+              <i class="{{char.icon}}" style="font-size:50px"></i>
+            </div>
+          </div>
+          <div class="escrita">
+            <h1>{{char.name}}</h1>
+            <p class="subs"></p>
+          </div>
+        </div>
+        </a>
+
+      </div>
+      </div>
+      </div>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/ghq.js"></script>
+  </body>
+</html>
