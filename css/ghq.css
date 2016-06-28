@@ -79,17 +79,20 @@ body { background:#E9EBEE; }
     .container {
         flex-direction:column;
     }
-    .teste { display: none }      
+    .teste { display: none }
   }
 
 @media only screen and (max-width: 768px){
   .role {
     width: 100%!important;
   }
+  .some {
+    display: none
+  }
 }
   .role {
     width: 100%
-    
+
   }
   .esquerdo {
     order: 1;
@@ -143,7 +146,7 @@ body { background:#E9EBEE; }
   top:0;
   background:url(../img/overlay.svg);
   background-repeat: no-repeat;
-  width: 100%;
+  width: 851px;
   z-index: 9;
   height: 315px;
 }
@@ -153,7 +156,7 @@ body { background:#E9EBEE; }
   position: absolute;
   top:0;
   background:url(../img/overlay-post.svg);
-  background-size: 100%;
+  background-size:cover;
   background-position: center center;
   background-repeat: no-repeat;
   width: 470px;
@@ -209,5 +212,41 @@ body { background:#E9EBEE; }
   .grid:hover {
     background:#3B5998; color:#fff;
   }
+.perfil-post {
+  position: relative
+}
 
+  .image-post {
+    padding-top: 13px;
+    padding-left: 13px;
+  }
+.name {
+  position: absolute;
+  top:20px;
+  left: 60px;
+  text-align: left
+}
+.namep {
+  color:#3B5998;
+  font-weight: 900!important;
+  text-decoration: none
+}
+.cover {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+}
 
+img.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  overflow-x: hidden;
+}

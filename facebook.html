@@ -11,6 +11,7 @@
   <link href='css/font-awesome.css' rel='stylesheet' type='text/css'>
   <link href='css/font-awesome.min.css' rel='stylesheet' type='text/css'>
   <link href='css/ghq.css' rel='stylesheet' type='text/css'>
+  <link href='css/modal.css' rel='stylesheet' type='text/css'>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
@@ -30,7 +31,10 @@
 .mai {
     display: none;
 }
-
+.selecionado {
+  background:#5972a5!important;
+  color:#fff
+}
   </style>
 </head>
 
@@ -54,36 +58,38 @@
       <form action="/file-upload"
       class="dropzone"
       id="my-awesome-dropzone" ngf-select ng-model="fotoPerfil" name="file" accept="image/*" ngf-max-size="2MB"></form>
-      <i ng-show="myForm.file.$error.maxSize">File too large 
-          {{errorFile.size / 1000000|number:1}}MB: max 2M</i>    
+      <i ng-show="myForm.file.$error.maxSize">File too large
+          {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
 </div>-->
 
   <form name="myForm">
-     <!-- 
+     <!--
       Nome da page: <input type="" ng-model="teste" name="" placeholder="Nome da página"><br>
       Catergoria da page: <input type="" ng-model="cate" name="" placeholder="Categoria da página">
       -->
     <br>
-    
+
      <div class="topo" style="position:relative;">
 
        <div class="capa" style="z-index:1">
         <div class="fotoCapa" ngf-background="fotoCapa" style="z-index:">
 
             <!--<img ng-show="myForm.file.$valid" ngf-thumbnail="fotoCapa" class="thumb" style="z-index:2">-->
-              <div id="over" class="overlay" style="">
-              
-          </div>
 
+            <div id="over" class="overlay" style="z-index:9999">
+
+            </div>
         </div>
-        <div style="position:absolute;width:50px; height:50px;top:0; z-index:999999; padding-top:10px; padding-left:10px">
+
+        <div style="position:absolute;width:50px; height:50px;top:0; z-index:999; padding-top:10px; padding-left:10px">
            <div class="upload">
               <input type="file" name="uplod" ngf-select ng-model="fotoCapa" />
           </div>
-         
+
         </div>
+
         <div style="width:100px; height:100px; padding-left:10px; padding-top:10px">
-         
+
         </div>
       <div class="texto" style="text-align:left">{{nomePage}} <br> <span class="categoria">{{categ}}</span></div>
         <div class="perfil" style="z-index:10">
@@ -98,44 +104,49 @@
       <div style="background:#fff; width:850px; height:70px; margin:0 auto;border:1px solid rgba(0, 0, 0, .25);">
         <div>
           <ul style="">
-            <li class="me" style="display:inline-block; clear:left"><button id="ov" class="grid">Guides</button></li>
-            <li class="me" style="display:inline-block; clear:left"><a href="">Página inicial</a></li>
-            <li class="me" style="display:inline-block; clear:left"><a href="">Sobre</a></li>
-            <li class="me" style="display:inline-block; clear:left"><a href="">Curtidas</a></li>
-            
+            <li class="me" style="display:inline-block; clear:left"><button id="ov" class="grid">20%</button></li>
+            <li class="me some" style="display:inline-block; clear:left"><a href="">Página inicial</a></li>
+            <li class="me some" style="display:inline-block; clear:left"><a href="">Sobre</a></li>
+            <li class="me some" style="display:inline-block; clear:left"><a href="">Curtidas</a></li>
+
           </ul>
         </div>
       </div>
      </div>
 
-     
+
      <br>
   </form>
 
 
   <div class="container">
     <div class="role esquerdo">
-       <div style="width:100%; text-align:center">
-        <div style="">
-          
+      <div style="width:100%; height:40px; text-align:left;">
+        <div style="width:100%;">
+          <i class="fa fa-picture-o" aria-hidden="true"></i><h2 style="display:inline-block; margin-left:10px;font-size:16px"> Fotos</h2>
         </div>
-       
+      </div>
+       <div style="width:100%; text-align:center">
+
+
           <!--
 
             apagarrr
           <i ng-click="fotoCapa = null" ng-show="fotoCapa" class="fa fa-times-circle fa-2x" aria-hidden="true" style="color:#E2634C"></i>-->
-      
+
          <!-- <i ng-click="fotoPerfil = null" ng-show="fotoPerfil" class="fa fa-times-circle fa-2x" aria-hidden="true" style="color:#E2634C"></i>-->
       <!--<img ng-show="myForm.file.$valid" ngf-thumbnail="fotoCapa" class="thumb"> <button ng-click="fotoCapa = null" ng-show="fotoCapa">Remove</button>-->
+
 <div style="width:100%;display:flex; flex-direction:row;flex-wrap:wrap;justify-content:space-around">
+
   <div style="width:103px; margin-bottom: 5px;height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-9/13417577_740888032680771_6657578410879032680_n.jpg?oh=456bdf94647e1954f25dd612330d467f&oe=5807FA60);background-size:100%;order:1;">
-    <div ngf-background="fotoCapa" style="width:104px; height:104px; background-size:100%"></div>
+    <div ngf-background="fotoCapa" style="width:104px; height:104px; background-size:100%; background-size:cover; background-position:center center"></div>
   </div>
-  <div style="width:103px;;height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-0/p110x80/13435473_744243775678530_3711155141077830228_n.jpg?oh=aafd6074c0ce32d81af2ca8478c29fb3&oe=57F501C9);background-size:100%;order:1;"> 
-  <div ngf-background="fotoPerfil" style="width:104px; height:104px;background-size:100%"></div>
+  <div style="width:103px;;height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-0/p110x80/13435473_744243775678530_3711155141077830228_n.jpg?oh=aafd6074c0ce32d81af2ca8478c29fb3&oe=57F501C9);background-size:100%;order:1;">
+  <div ngf-background="fotoPerfil" style="width:104px; height:104px;background-size:100%; background-size:100%; background-size:cover; background-position:center center"></div>
   </div>
   <div style="width:103px; height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-0/p110x80/13174038_1092206840841265_4905760111593758236_n.jpg?oh=21958fd6e7aef208164f44d0043dd876&oe=57FBBC8D);;background-size:100%;order:1;">
-    <div ngf-background="fotoPost" style="width:104px; height:104px;background-size:100%"></div>
+    <div ngf-background="fotoPost" style="width:104px; height:104px;background-size:100%; background-size:100%; background-size:cover; background-position:center center"></div>
   </div>
   <div style="width:103px;  margin-bottom: 5px; height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-9/13417577_740888032680771_6657578410879032680_n.jpg?oh=456bdf94647e1954f25dd612330d467f&oe=5807FA60);;background-size:100%;order:1;"></div>
   <div style="width:103px; height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-9/13417577_740888032680771_6657578410879032680_n.jpg?oh=456bdf94647e1954f25dd612330d467f&oe=5807FA60);;background-size:100%;order:1;"></div>
@@ -143,8 +154,8 @@
   <div style="width:103px; height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-9/13417577_740888032680771_6657578410879032680_n.jpg?oh=456bdf94647e1954f25dd612330d467f&oe=5807FA60);;background-size:100%;order:1;"></div>
   <div style="width:103px; height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-9/13417577_740888032680771_6657578410879032680_n.jpg?oh=456bdf94647e1954f25dd612330d467f&oe=5807FA60);;background-size:100%;order:1;"></div>
   <div style="width:103px; height:103px; background:url(https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-9/13417577_740888032680771_6657578410879032680_n.jpg?oh=456bdf94647e1954f25dd612330d467f&oe=5807FA60);;background-size:100%;order:1;"></div>
-  
-  
+
+
 
 </div>
 
@@ -152,30 +163,57 @@
 
 
     <div class="role direito">
+      <div class="perfil-post">
+        <div class="image-post">
+
+          <div style="background:url(img/perfil.jpg); width:40px; height:40px; background-size:cover">
+            <div ngf-background="fotoPerfil" style="width:40px; height:40px; background-size:cover">
+            </div>
+          </div>
+
+        </div>
+        <div class="name" style="line-height:15px">
+          <a href="javascript:void(0)" class="namep">Gustavo Quinalha</a><br>
+          <span style="font-size:12px; color:#90949C; line-height:0px">Agora <i class="fa fa-globe" aria-hidden="true"></i></span>
+        </div>
+      </div>
       <div style="padding-top:12px; padding-bottom:12px">
         <div class="post">
-        <div style="width:100%; height:470px; margin:0 auto; background-size:100%; background-position:center center; background-repeat:no-repeat; z-index:9" ngf-background="fotoPost">
-          
+
+
+
+        <div style="width:100%; height:470px; margin:0 auto; background-size:cover; background-position:center center; background-repeat:no-repeat; z-index:9" ngf-background="fotoPost">
+
         </div>
-        <div class="overlaypost">
-          <div style="position:absolute;width:50px; height:50px;top:0; z-index:999999; padding-top:5px; padding-left:5px">
+        <div class="overlaypost" id="overr"></div>
+          <div style="position:absolute;width:50px; height:50px;top:0; z-index:99; padding-top:5px; padding-left:5px">
                <div class="upload">
                 <input type="file" name="uplod" ngf-select ng-model="fotoPost"/>
                </div>
              </div>
 
+
+
+           </div>
+
+         </div>
+      <div class="responsive">
+        <div class="img" style="height:20px">
+
+            <img ng-show="myForm.file.$valid" ngf-thumbnail="fotoPost" class="">
+            <div ng-show="myForm.file.$valid" style="height:20px">
+
+            </div>
         </div>
-
-       </div>
-
       </div>
     </div>
+
   </div>
 
 <div class="teste" style="display:none">
   <div style="background:url(img/devices.svg) 100%; width:900px; max-width:100%; height:500px; background-size:100%;margin:0 auto; position:relative">
 <div style="background:#fff; position:absolute;top:100px;left:310px; width:420px; height:120px; background-size:cover; background-position:center center" ngf-background="fotoCapa">
- 
+
 </div>
 
 </div>
@@ -186,7 +224,7 @@
   <div style="padding-top:50px"></div>
   <div class="">
     <div class="rodape">
-      <i class="fa fa-code" aria-hidden="true" style=""></i> with <i class="fa fa-coffee" aria-hidden="true" style=""></i> by <a href="http://github.com/gustavoquinalha">Gustavo</a><br> 
+      <i class="fa fa-code" aria-hidden="true" style=""></i> with <i class="fa fa-coffee" aria-hidden="true" style=""></i> by <a href="http://github.com/gustavoquinalha">Gustavo</a><br>
       <div class="follow" style="padding-top:10px">
         <a href="https://www.facebook.com/gquinalha" target="blank"><i class="fa fa-facebook-official fa-2x" aria-hidden="true" style=" padding-right: 10px"></i></a>
         <a href="https://github.com/gustavoquinalha" target="blank"><i class="fa fa-github fa-2x" aria-hidden="true" style=" padding-right: 10px"></i></a>
@@ -194,16 +232,60 @@
       </div>
     </div>
   </div>
+
+
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal" style="z-index:999">
+    <span class="close">×</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+
+  <script>
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  // Get all images and insert the clicked image inside the modal
+  // Get the content of the image description and insert it inside the modal image caption
+  var images = document.getElementsByTagName('img');
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  var i;
+  for (i = 0; i < images.length; i++) {
+     images[i].onclick = function(){
+         modal.style.display = "block";
+         modalImg.src = this.src;
+         modalImg.alt = this.alt;
+         captionText.innerHTML = this.nextElementSibling.innerHTML;
+     }
+  }
+  </script>
 <script>
   $(document).ready(function(){
-      $("#ov").click(function(){
-          $("#over").toggleClass("mai");
-      });
+    $("#ov").click(function(){
+        $("#over").toggleClass("mai");
+    });
+    $("#ov").click(function(){
+        $("#overr").toggleClass("mai");
+    });
+
+    $("#ov").click(function(){
+        $("#ov").toggleClass("selecionado");
+    });
   });
 </script>
   <script type="text/javascript" src="main.js"></script>
 </body>
-  
+
 
 </html>
-
