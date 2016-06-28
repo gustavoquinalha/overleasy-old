@@ -249,4 +249,25 @@ img.cover {
   min-width: 50%;
   min-height: 50%;
   overflow-x: hidden;
+
 }
+
+
+
+.tt::before {
+    content: "teste";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
