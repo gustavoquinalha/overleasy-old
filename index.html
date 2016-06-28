@@ -28,25 +28,25 @@
       
 
       <div style="margin:0 auto; width:100%;text-align:center; padding-top:50px">
-        <input type="text" ng-model="searchChar" placeholder="Search" style="width:80%; margin:0 auto; font-size:22px; padding-top:10px;padding-bottom:10px">
+        <input type="text" ng-model="searchChar" placeholder="Pesquisar..." style="width:89%; margin:0 auto; font-size:22px; padding-top:10px;padding-bottom:10px">
       </div>
       
 
 
 
 
-      <div class="fundo" style="width:80%; margin:0 auto;">
+      <div class="fundo" style="width:90%; margin:0 auto;">
       <div class="card-all-3 um" ng-repeat="char in characters | filter:searchChar">
-        <a href="{{char.link}}">
+        <a href="{{char.link}}" style="text-decoration:none">
           <div class="card centra text-center">
-          <div class="logo-logo">
+          <div class="logo-logo" style="background:{{char.color}}">
             <div class="logo">
               <i class="{{char.icon}}" style="font-size:50px"></i>
             </div>
           </div>
           <div class="escrita">
-            <h1>{{char.name}}</h1>
-            <p class="subs"></p>
+            <h1 style="">{{char.name}}</h1>
+            {{char.medida}}
           </div>
         </div>
         </a>
